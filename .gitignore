@@ -26,3 +26,6 @@ pom.xml
 /nbproject
 /nb-build
 .pydevproject
+
+# Ignore Gradle project-specific cache directory
+.gradle

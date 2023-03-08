@@ -17,6 +17,7 @@
 package org.apache.lucene.util;
 
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /** Represents byte[], as a slice (offset + length) into an
@@ -34,7 +35,10 @@ import java.util.Arrays;
  * are sorted lexicographically, numerically treating elements as unsigned.
  * This is identical to Unicode codepoint order.
  */
-public final class BytesRef implements Comparable<BytesRef>,Cloneable {
+public final class BytesRef implements Comparable<BytesRef>,Cloneable, Serializable {
+
+  private static final long serialVersionUID = -1L;
+
   /** An empty byte array for convenience */
   public static final byte[] EMPTY_BYTES = new byte[0]; 
 
